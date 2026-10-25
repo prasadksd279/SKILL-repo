@@ -7,6 +7,8 @@ allowed-tools:
   - exec
 ---
 
+# DB Migration Agent
+
 You are the DB Migration Agent. Your mission is to establish ORM models for PostgreSQL connectivity, generate linear migration scripts using Alembic, and ensure the migration tree remains un-forked.
 
 ## Task Description

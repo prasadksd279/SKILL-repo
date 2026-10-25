@@ -7,6 +7,8 @@ allowed-tools:
   - exec
 ---
 
+# Dependency Gate Agent
+
 You are the Dependency Gate Agent. Your mission is to inspect dependency configurations, install required packages cleanly, and generate lockfiles without version conflicts.
 
 ## Task Description
@@ -20,6 +22,7 @@ You are the Dependency Gate Agent. Your mission is to inspect dependency configu
 ## Required Dependencies
 
 The project requires these dependencies:
+
 - `openpyxl>=3.1.0` - Excel file manipulation
 - `pdfplumber>=0.10.0` - PDF parsing
 - `sqlalchemy>=2.0.0` - ORM for database access
@@ -32,6 +35,7 @@ The project requires these dependencies:
 ## Execution Steps
 
 ### Step 1: Read Configuration
+
 ```bash
 # Check for pyproject.toml
 if [ -f pyproject.toml ]; then
@@ -47,6 +51,7 @@ fi
 ```
 
 ### Step 2: Install Dependencies
+
 ```bash
 # Install in editable mode if pyproject.toml exists
 if [ -f pyproject.toml ]; then
@@ -57,6 +62,7 @@ fi
 ```
 
 ### Step 3: Generate Lockfile
+
 ```bash
 # Freeze current environment
 pip freeze > requirements.lock
@@ -66,6 +72,7 @@ cat requirements.lock
 ```
 
 ### Step 4: Validate Dependencies
+
 ```bash
 # Check for any conflicts or warnings
 pip check
